@@ -1,0 +1,33 @@
+
+
+Ce programme génère une empreinte MD5 pour chaque ligne d'un fichier en supprimant les retours à la ligne,
+assurant une sortie de taille fixe. Les empreintes sont enregistrées dans un autre fichier.
+Le programme utilise l'algorithme MD5 pour ce faire. Bien qu'il mentionne des collisions possibles, 
+il ne cherche pas actuellement à inverser le processus pour récupérer les mots de passe en clair. 
+Des méthodes telles que l'utilisation de dictionnaires de hash-mots de passe fuités sont évoquées, 
+mais le programme se limite au calcul d'empreintes MD5 sur des fichiers afin de mettre en pratique l'intégrité et l'authenticité
+d'un fichier 
+
+Un exemple d'exploit serveur-client "Hash Breaker" pour casser des empreintes est également disponible sur mon GitHub.
+
+Concernant ce programma vous aurez besoin du fichier1.txt ou autre contenant les infos que vous souhaiteriez hash et un second fichier 
+qui stockera l'empreinte du hash du fichier1.txt à hash :
+
+:) don't forgot the magic word : sudo su
+
+
+apt-get update && apt-get upgrade
+apt-get install libssl-dev
+
+exemple of compilation with gcc : gcc -o <MD5_Hash> MD5_HashFile.c -lssl -lcrypto
+
+no gcc? ok :
+
+apt-get install gcc
+gcc -v to make sure that gcc is enable
+
+
+@gil_cedrick Security System
+@child_of_Africa
+
+
